@@ -1,0 +1,13 @@
+﻿@inherits LayoutComponentBase
+@inject IBootstrapCSS BootstrapCSS
+
+<div>
+    @Body
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await BootstrapCSS.SetBootstrapCSS("4.3.1");
+    }
+}
